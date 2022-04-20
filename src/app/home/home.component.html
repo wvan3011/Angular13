@@ -1,7 +1,17 @@
 <div class="test">
     <h3>đây là component Home</h3>
-    <input type="text" [(ngModel)]="name">
-    <h2>Chao ban {{name}}</h2>
-    <button (click)="resetName()">Reset Ten</button>
+    <input [(ngModel)]="age">
+    <h3>Tuoi cua ban la {{ age }}</h3>
+    <!-- 
+    <h2 *ngIf="age > 18">Ban qua gia roi</h2>
+    <h2 *ngIf="age <= 18">Ban con tre lam</h2>
+     -->
+    <div *ngIf="age > 18; then gia; else tre"></div>
+    <ng-template #gia>
+        <h2>Ban qua gia roi</h2>
+    </ng-template>
+    <ng-template #tre>
+        <h2>Ban con tre lam</h2>
+    </ng-template>
 
 </div>
