@@ -3,5 +3,6 @@
     <h2>Chao ban {{name}}</h2>
     <input value="{{name}}">
     <br>
-    <input type="text" [value]="'Day la ' + name">
+    <h2 *ngIf="age > 18">Ban qua gia roi</h2>
+    <h2 *ngIf="age <= 18">Ban con tre lam</h2>
 </div>
